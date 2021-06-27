@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/* Main CSS Document */
+
+html {
+  font-size:62.5%;
+}
+body {
+  font-size:1.4rem;
+  color: #5b5b5b;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing:border-box;
+}
+.clearfix::after {
+  content:'';
+  display:block;
+  clear:both;
+}
+.container{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.container-inner{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border: #ffb566 solid 20px;
+  margin: 0px;
+  background-color: #FFFFFF;
+}
+.font-serif{
+  font-family: 'Noto Serif JP', serif;
+}
+a{
+  text-decoration: none;
+  color: #5b5b5b;
+}
+a:hover, a img:hover{
+  opacity: 80%;
+}
+.center{
+  text-align: center;
+}
+
+h1{
+  font-size: 110%;
+  margin: 40px auto;
+  text-align: center;
+}
+h1 .small{
+  font-size: 50%;
+}
+.wrap{
+  width: calc( 100% - 50px );
+  margin: 30px auto 10px auto;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.pc-none{
+  display: block;
+}
+.sp-none{
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  width: 270px;
+  max-width: 90%;
+  height: 45px;
+  text-align: center;
+  font-size: 22px ;
+  text-decoration: none;
+  line-height: 45px;
+  outline: none;
+  position: relative;
+  background-color: #FFB566;
+  border-radius: 45px;
+  color: #fff;
+  line-height: 2em;
+  -webkit-transition: none;
+  transition: none;
+  box-shadow: 0 3px 0 #CC9052;
+}
+.button:active {
+  top: 3px;
+  box-shadow: none;
+}
+.button .arrow{
+  width: 33px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+
+/* ファーストビューSection */
+.firstview{
+  width: 100%;
+  padding: 60px 0 0 0;
+  display: block;
+  overflow: hidden;
+}
+.firstview::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 226px;
+  height: 154px;
+  top: -30px;
+  left: 70%;
+  background-image: url(../img/firstview_img.png);
+  background-size: contain;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.corp-engr_logo{
+  width: 310px;
+  margin: 0px auto;
+}
+.corp-engr-cycle{
+  width: 318px;
+  max-width: 100%;
+  height: 177px;
+  background: url(../img/corp-engr-cycle_sp.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 50px auto;
+}
+
+/* 説明Section */
+.about{
+  background: rgba(255,181,102,0.1);
+}
+.about .wrap{
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+  padding: 20px 0;
+}
+
+.corp-engr-graf{
+  width: 100%;
+  max-width: 325px;
+  margin: 10px auto;
+}
+.warning{
+  width: 95%;
+  margin: 50px auto;
+  padding: 20px;
+  background: #FFFFFF;
+}
+
+/* Info Section */
+.info .wrap{
+  margin: 0px auto 30px auto;
+  padding: 0 0 30px 0;
+}
+.media-post{
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #5B5B5B;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+}
+.media-post img{
+  width: calc( 100% - 40px );
+  margin: 0 auto 20px auto;
+}
+
+/* LoI Section */
+.LoI{
+  background: #5B5B5B;
+  color: #FFFFFF;
+}
+.LoI .wrap{
+  max-width: 540px;
+  margin: 0px auto;
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.LoI img{
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.LoI h3{
+  width: 100%;
+  font-size: 150%;
+  margin: 20px 0;
+}
+.LoI p{
+  margin: 10px 0px 30px 0px;
+}
+.LoI .button {
+  background-color: #333333;
+  box-shadow: 0 3px 0 #111111;
+}
+.LoI img.gotoTOP{
+  width: 150px;
+}
+
+
+
+
+/* --------------------------
+タブレット用レイアウト 
+*/
+@media screen and (min-width: 600px) {
+
+  /* ファーストビューSection */
+  .corp-engr_logo{
+    width: 410px;
+  }
+  .corp-engr-cycle{
+    width: 516px;
+    max-width: 516px;
+    height: 148px;
+    background: url(../img/corp-engr-cycle_pc.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  
+  }
+
+  /* 説明Section */
+  .text{
+    width: 85%;
+  }
+  .warning{
+    width: 90%;
+    max-width: 700px;
+  }
+
+
+}
+
+
+/* --------------------------
+PC用レイアウト 
+*/
+@media screen and (min-width: 1025px) {
+  .container-inner{
+    border: #ffb566 solid 25px;
+  }
+  .pc-none{
+    display: none;
+  }
+  .sp-none{
+    display: block;
+  }
+  .wrap{
+    width: 860px;
+    margin: 30px auto;
+  }
+  .firstview::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 494px;
+    height: 336px;
+    top: 30px;
+    left: 70%;
+    background-image: url(../img/firstview_img.png);
+    background-size: contain;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* 説明Section */
+  .about .text{
+    width: 55%;
+    margin-right: 20px;
+  }
+
+  /* LoI Section */
+  .LoI{
+    background: #FFFFFF;
+  }
+  .LoI .wrap {
+    max-width: 610px;
+    padding: 30px;
+    background: #5B5B5B;
+    color: #FFFFFF;
+    border-radius: 10px;
+  }
+
+  /* LoI Section */
+  .LoI img.gotoTOP{
+    width: 230px;
+    bottom: -25px;
+    position: relative;
+  }
+  
+
+}
+
